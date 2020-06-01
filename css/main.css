@@ -1,0 +1,89 @@
+#navBar {
+    position: absolute;
+    width: 100%;
+    height: 39px;
+    left: 16px;
+    top: 10px;
+    overflow: hidden;
+    background-color: #333;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+}
+
+#navBar a {
+    vertical-align: middle;
+    color: #f2f2f2;
+    padding: 16px 18px;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+#navBar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#navBar a.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+#inbar {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    top: 80px;
+    position: absolute;
+    left: 40vw;
+}
+
+#divTagId {
+    position: absolute;
+    left: 20%;
+    width: 50vw;
+    height: 50vh;
+    background: -moz-linear-gradient(45deg, rgba(89, 148, 202, 1), rgba(255, 255, 255, 1));
+    border: 1in;
+    float: middle;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10%;
+    top: 60px;
+}
+
+#form_main {
+    position: absolute;
+    width: 50vh;
+    height: 80vh;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border-style: ridge;
+    border-radius: 2%;
+    background: -moz-linear-gradient(-45deg, rgba(100, 87, 153, 1) 0%, rgba(89, 148, 202, 1) 62%, rgba(95, 154, 207, 0.7) 68%, rgba(125, 185, 232, 0) 100%);
+    box-shadow: 5px 10px #888888;
+    font-family: Roboto Condensed;
+}
+
+#inner {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#okayImage {
+    top: 10%;
+    left: 20%;
+    position: absolute;
+}
+
+#Outermsg {
+    top: 50%;
+    /* left: 50%; */
+    position: absolute;
+    text: align-center;
+}

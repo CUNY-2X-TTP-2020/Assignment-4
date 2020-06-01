@@ -1,16 +1,23 @@
 <html lang="en">
 
 <head>
-    <title> Two Buttons </title>
+    <title>Two Buttons</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
-    <div>
-        <p id="button_left_txt" style="text-align:left;float:left;"></p>
+    <div id="navBar">
+        <a href="largeElement.html">Hover</a>
+        <a href="twoButtons.html">Two Buttons</a>
+        <a href="form.html">Form</a>
+    </div>
+    <div id="inbar">
+        <p id="button_left_txt" style="text-align: left; float: left;"></p>
         <button id="button_left" onclick="buttonleft()">Push me</button>
-        <button id="button_right" onclick="buttonright()">Push me </button>
-        <p id="button_right_txt" style="text-align:right;float:right;"></p>
-
+        <button id="button_right" onclick="buttonright()">Push me</button>
+        <p id="button_right_txt" style="text-align: right; float: right;"></p>
     </div>
     <script type="text/javascript">
         let left_text = document.getElementById("button_left_txt");
@@ -19,7 +26,10 @@
         function buttonleft() {
             if (left_text.innerText === "" && right_text.innerText === "") {
                 left_text.innerText = "I'm right";
-            } else if (left_text.innerText === "" && right_text.innerText === "I'm right") {
+            } else if (
+                left_text.innerText === "" &&
+                right_text.innerText === "I'm right"
+            ) {
                 left_text.innerText = "No, I'm right";
             } else {
                 //pass
@@ -29,20 +39,17 @@
         function buttonright() {
             if (left_text.innerText === "" && right_text.innerText === "") {
                 right_text.innerText = "I'm right";
-            } else if (left_text.innerText === "I'm right" && right_text.innerText === "") {
+            } else if (
+                left_text.innerText === "I'm right" &&
+                right_text.innerText === ""
+            ) {
                 right_text.innerText = "No, I'm right";
             } else {
                 //pass
             }
-
         }
     </script>
-    <style>
-        div {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-        }
-    </style>
+
 </body>
 
 </html>
