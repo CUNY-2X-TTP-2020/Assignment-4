@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <title> Two Buttons </title>
+</head>
+
+<body>
+    <div>
+        <p id="button_left_txt" style="text-align:left;float:left;"></p>
+        <button id="button_left" onclick="buttonleft()">Push me</button>
+        <button id="button_right" onclick="buttonright()">Push me </button>
+        <p id="button_right_txt" style="text-align:right;float:right;"></p>
+
+    </div>
+    <script type="text/javascript">
+        let left_text = document.getElementById("button_left_txt");
+        let right_text = document.getElementById("button_right_txt");
+
+        function buttonleft() {
+            if (left_text.innerText === "" && right_text.innerText === "") {
+                left_text.innerText = "I'm right";
+            } else if (left_text.innerText === "" && right_text.innerText === "I'm right") {
+                left_text.innerText = "No, I'm right";
+            } else {
+
+            }
+        }
+
+        function buttonright() {
+            if (left_text.innerText === "" && right_text.innerText === "") {
+                right_text.innerText = "I'm right";
+            } else if (left_text.innerText === "I'm right" && right_text.innerText === "") {
+                right_text.innerText = "No, I'm right";
+            } else {
+
+            }
+
+        }
+    </script>
+    <style>
+        div {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+    </style>
+</body>
+
+</html>
