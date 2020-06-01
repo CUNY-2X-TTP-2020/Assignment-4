@@ -1,12 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Form</title>
-
-
 </head>
 
 <body>
@@ -16,25 +14,48 @@
         <body>
             <div id="Form">
                 <div id="inner">
-                    <h2>A Form</h2>
-                    <form>
-                        <label for="userName">Username</label><br>
-                        <input type="text" id="userName" name="ame" value="John"><br>
-                        <label for="email">E-Mail</label><br>
-                        <input type="email" id="email" name="lname" value=""><br>
+                    <h2 id="form_h1">A Form</h2>
+                    <form id="form_">
+                        <label for="userName">Username</label><br />
+                        <input type="text" id="userName" name="userName" /><br />
+                        <label for="email">E-Mail</label><br />
+                        <input type="email" id="email" value="" /><br />
                         <label for="pword">Password</label>
-                        <br>
-                        <input type="password" id="passwordId"><br><br>
-                        <button type="button" id=" button " onclick="submit_form()">Submit</button>
+                        <br />
+                        <input type="password" id="passwordId" /><br /><br />
+                        <button type="button" id="submit_button">Submit</button>
                     </form>
-                    <p id="thanks"></p>
+                    <p id="msg"></p>
                 </div>
+                <h1 id="Outermsg"></h1>
             </div>
+            <script type="text/javascript">
+                let sub_b = document.getElementById("submit_button");
+                sub_b.addEventListener("click", submit_form);
+
+                function submit_form() {
+                    let pword = document.getElementById("passwordId").value;
+                    let message = document.getElementById("msg");
+                    let uname = document.getElementById("userName").value;
+                    let email = document.getElementById("email").value;
+                    let enter_msg = document.getElementById("Outermsg");
+                    if (pword == "" || uname == "" || email == "") {
+                        message.innerText =
+                            "Form is not complete. Cannot proceed further.";
+                    } else if (pword !== "12345678") {
+                        alert("Password is incorrect!");
+                    } else if (pword === "12345678") {
+                        var form = document.getElementById("inner");
+                        form.remove();
+                        enter_msg.innerText = `${uname} Welcome To This Place`;
+
+                    }
+                }
+            </script>
         </body>
 
         </html>
     </div>
-
 </body>
 
 </html>
