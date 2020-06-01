@@ -4,6 +4,9 @@
 
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+
     <title>Form</title>
 </head>
 
@@ -12,7 +15,12 @@
         <html>
 
         <body>
-            <div id="Form">
+            <div id="navBar">
+                <a href="largeElement.html">Hover</a>
+                <a href="twoButtons.html">Two Buttons</a>
+                <a href="form.html">Form</a>
+            </div>
+            <div id="form_main">
                 <div id="inner">
                     <h2 id="form_h1">A Form</h2>
                     <form id="form_">
@@ -27,30 +35,10 @@
                     </form>
                     <p id="msg"></p>
                 </div>
+                <img id="okayImage"></img>
                 <h1 id="Outermsg"></h1>
             </div>
-            <script type="text/javascript">
-                let sub_b = document.getElementById("submit_button");
-                sub_b.addEventListener("click", submit_form);
-
-                function submit_form() {
-                    let pword = document.getElementById("passwordId").value;
-                    let message = document.getElementById("msg");
-                    let uname = document.getElementById("userName").value;
-                    let email = document.getElementById("email").value;
-                    let enter_msg = document.getElementById("Outermsg");
-                    if (pword == "" || uname == "" || email == "") {
-                        message.innerText =
-                            "Form is not complete. Cannot proceed further.";
-                    } else if (pword !== "12345678") {
-                        alert("Password is incorrect!");
-                    } else if (pword === "12345678") {
-                        var form = document.getElementById("inner");
-                        form.remove();
-                        enter_msg.innerText = `${uname} Welcome To This Place`;
-
-                    }
-                }
+            <script src="js/main.js">
             </script>
         </body>
 
