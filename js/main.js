@@ -1,6 +1,7 @@
 let sub_b = document.getElementById("submit_button");
 sub_b.addEventListener("click", submit_form);
 
+
 function submit_form() {
     let pword = document.getElementById("passwordId").value;
     let message = document.getElementById("msg");
